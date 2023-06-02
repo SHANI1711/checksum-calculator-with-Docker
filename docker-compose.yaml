@@ -1,0 +1,17 @@
+version: "3"
+services:
+    container1:
+        image: shanikachhadiya1711/myapp1 
+        ports:
+            - 5000:5000
+        depends_on:
+            - container2
+        volumes:
+            - ./:/home/
+    container2:
+        image: shanikachhadiya1711/myapp2
+        ports:
+            - 5001:5001
+        volumes:
+            - ./:/home/
+   
